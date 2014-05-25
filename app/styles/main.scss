@@ -91,3 +91,140 @@ body {
         border-bottom: 0;
     }
 }
+
+
+$my_base_width: 670;
+$my_btn_width: 180;
+$my_side_margin: 10;
+
+$my_margin_2_1: $my_side_margin;
+$my_margin_2_2: ($my_base_width / 2) - $my_btn_width - $my_side_margin;
+$my_margin_3: (($my_base_width / 3) - $my_btn_width) / 2;
+$my_margin_3_1: $my_side_margin;
+$my_margin_3_2: (($my_base_width / 3) - $my_btn_width) / 2;
+$my_margin_3_3: (($my_base_width / 3) - $my_btn_width) - $my_side_margin;
+
+.my-btn-size {
+    background-color: #E0E0E0;
+    padding: 15px;
+    .btn-group{
+        .btn {
+            width: 0px + $my_btn_width;            
+        }
+    }
+}
+
+$my-margin: 10px;
+
+$btn-width-both-end: 180px;
+$btn-margin-both-end: 10px;
+
+.btn-group-both-end {
+//    @extend .btn-group-justified;
+
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    > .btn,
+    > .btn-group {
+        float: none;
+        display: table-cell;
+        width: 1%;
+    }
+
+    background-color: #E0E0E0;
+    padding: 15px;
+ 
+    .btn-group:nth-child(1) {
+        .btn {
+            width: $btn-width-both-end;
+            margin-left: $btn-margin-both-end;
+        }
+    }
+    .btn-group:nth-child(2) {
+        .btn {
+            width: $btn-width-both-end;
+            float: right;
+            margin-right: $btn-margin-both-end;
+        }  
+    }    
+}
+
+
+
+.my-btn-both-end {
+    .btn-group:nth-child(1) {
+        .btn {
+            margin-left: $my-margin;
+        }
+    }
+    .btn-group:nth-child(2) {
+        .btn {
+            float: right;
+            margin-right: $my-margin;
+        }  
+    }
+}
+
+.my-btn-group-2 {
+    .btn-group:nth-child(1) {
+        .btn {
+            max-width: 0px + $my_btn_width;
+            margin-left: 0px + $my_margin_2_1;
+        }
+    }
+    .btn-group:nth-child(2) {
+        .btn {
+            max-width: 0px + $my_btn_width;
+            float: right;
+            margin-right: 0px + $my_margin_2_1;
+        }  
+    }
+}
+
+
+
+.my-btn-group-3 {    
+    .btn-group:nth-child(1) {
+        .btn {
+            max-width: 0px + $my_btn_width;
+            margin-left: 0px + $my_margin_3_1;
+        }
+    }
+    .btn-group:nth-child(2) {
+        .btn {
+            max-width: 0px + $my_btn_width;
+            margin-left: 0px + $my_margin_3_2;
+        }  
+    }
+    .btn-group:nth-child(3) {
+        .btn {
+            max-width: 0px + $my_btn_width;
+            margin-left: 0px + $my_margin_3_3;
+        }  
+    }
+}
+
+.my-btn-group-3b {    
+    .btn-group:nth-child(1) {
+        .btn {
+            max-width: 0px + $my_btn_width;
+            margin-left: 0px + $my_margin_3_1;
+        }
+    }
+    .btn-group:nth-child(2) {
+        .btn {
+            max-width: 0px + $my_btn_width;
+            margin-left: 0px + $my_margin_3_2;
+        }  
+    }
+    .btn-group:nth-child(3) {
+        .btn {
+            max-width: 0px + $my_btn_width;
+            margin-left: 0px + $my_margin_3_3;
+        }  
+    }
+}
+
+
